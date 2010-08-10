@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nexus.IRC
+namespace IrcClient
 {
     public enum MessageType
     {

@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-using Nexus.IRC;
+using IrcClient;
 
-
-namespace IrcBot
+namespace CSharpBot
 {
     public interface IAddOn
     {

@@ -8,6 +8,7 @@
     <ProjectGuid>{FC304B12-23CD-4C35-901F-56B66DC959F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>CSharpBot</AssemblyName>
+    <StartupObject>CSharpBot.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -17,6 +18,7 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -27,6 +29,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -43,4 +47,10 @@
     <Compile Include="Plugins\WikipediaPlugin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\IrcClient\IrcClient.csproj">
+      <Project>{17AAE371-9CF1-496E-B41E-5303A602B816}</Project>
+      <Name>IrcClient</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

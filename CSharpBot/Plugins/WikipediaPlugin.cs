@@ -5,11 +5,10 @@ using System.Net;
 using System.IO;
 using System.Xml;
 using System.Xml.XPath;
-using Nexus.IRC;
+using IrcClient;
 using System.Data;
 using System.Text.RegularExpressions;
-
-namespace IrcBot
+namespace CSharpBot.Plugins
 {
     public class WikipediaPlugin : AddOnBase
     {

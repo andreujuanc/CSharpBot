@@ -33,7 +33,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="MessageType.cs" />
-    <Compile Include="IrcClient.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="IrcDataEventArgs.cs" />
     <Compile Include="IrcMessage.cs" />
   </ItemGroup>

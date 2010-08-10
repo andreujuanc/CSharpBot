@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace IrcBot.Plugins
+namespace CSharpBot.Plugins
 {
     public class IrcManagement : AddOnBase
     {

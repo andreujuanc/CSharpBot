@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nexus.IRC
+namespace IrcClient
 {
     public delegate void IrcDataEventHandler(object sender, IrcDataEventArgs e);
     public class IrcDataEventArgs : EventArgs

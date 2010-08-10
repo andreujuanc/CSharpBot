@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Nexus.IRC;
+using IrcClient;
 using System.Threading;
 using System.Diagnostics;
-using IrcBot.Plugins;
-
-namespace IrcBot
+using CSharpBot.Plugins;
+namespace CSharpBot
 {
    
     public class IrcBot
@@ -46,7 +45,7 @@ namespace IrcBot
         }
 
         Random m_rand = null;
-        IrcClient m_client;
+        Client m_client;
         string m_channel;
         string m_nick;
 
@@ -54,7 +53,7 @@ namespace IrcBot
         {
             LoadAllAddOns();
 
-            m_client = new IrcClient(server, port);
+            m_client = new Client(server, port);
             m_client.DataReceived += new IrcDataEventHandler(m_client_DataReceived);
             m_rand = new Random(DateTime.Now.Millisecond);
         }

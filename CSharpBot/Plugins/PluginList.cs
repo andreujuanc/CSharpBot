@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace IrcBot
+namespace CSharpBot.Plugins
 {
     public class PluginList : AddOnBase
     {
@@ -11,7 +10,7 @@ namespace IrcBot
             IsService = true;
         }
 
-        public override void ProcessMenssage(Nexus.IRC.IrcMessage message, string[] args)
+        public override void ProcessMenssage(IrcClient.IrcMessage message, string[] args)
         {
             try
             {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace IrcBot
+using IrcClient;
+namespace CSharpBot
 {
     public abstract class AddOnBase : IAddOn
     {
@@ -60,7 +60,7 @@ namespace IrcBot
         /// </summary>
         /// <param name="message"></param>
         /// <param name="args"></param>
-        public virtual void ProcessMenssage(Nexus.IRC.IrcMessage message, string[] args) 
+        public virtual void ProcessMenssage(IrcMessage message, string[] args) 
         {
             
         }
@@ -70,7 +70,7 @@ namespace IrcBot
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public virtual void Client_ProcessedDataReceived(object sender, Nexus.IRC.IrcDataEventArgs e)
+        public virtual void Client_ProcessedDataReceived(object sender,IrcClient.IrcDataEventArgs e)
         {
             
         }

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace IrcBot
+namespace CSharpBot.Plugins
 {
     public class Talking : AddOnBase
     {
@@ -37,7 +36,7 @@ namespace IrcBot
 
         string m_lastQuestion = "";
         string answerTO = "";
-        public override void Client_ProcessedDataReceived(object sender, Nexus.IRC.IrcDataEventArgs e)
+        public override void Client_ProcessedDataReceived(object sender,IrcClient.IrcDataEventArgs e)
         {
             if (!IsStarted)
                 return;

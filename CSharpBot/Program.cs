@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
-
-namespace IrcBot
+using IrcClient;
+namespace CSharpBot
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace IrcBot
             
             string server = "irc.freenode.net";
             bot = new IrcBot(server, 6667);
-            bot.DataReceived += new Nexus.IRC.IrcDataEventHandler(bot_DataReceived);
+            bot.DataReceived += new IrcDataEventHandler(bot_DataReceived);
             Console.WriteLine("Connecting to: " + server);
             bot.Start();
             if (bot.Connected) 
@@ -38,7 +38,7 @@ namespace IrcBot
             
         }
 
-        static void bot_DataReceived(object sender, Nexus.IRC.IrcDataEventArgs e)
+        static void bot_DataReceived(object sender, IrcClient.IrcDataEventArgs e)
         {
             Console.WriteLine(e.Data);
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using IrcClient;
 
-namespace IrcBot
+namespace CSharpBot.Plugins
 {
     public class AntiFloodPlugin : AddOnBase
     {
@@ -48,15 +49,15 @@ namespace IrcBot
 
         public override void OnStart()
         {
-             this.IrcBot.SendingMessage += new Nexus.IRC.IrcDataEventHandler(ircBot_SendingMesssage);
+             this.IrcBot.SendingMessage += new IrcDataEventHandler(ircBot_SendingMesssage);
              m_timer = new Timer(new TimerCallback(TimerEvent), null, 1, 5000);
         }
         public override void OnStop()
         {
-            this.IrcBot.SendingMessage -= new Nexus.IRC.IrcDataEventHandler(ircBot_SendingMesssage);
+            this.IrcBot.SendingMessage -= new IrcDataEventHandler(ircBot_SendingMesssage);
         }
 
-        private void ircBot_SendingMesssage(object sender, Nexus.IRC.IrcDataEventArgs e)
+        private void ircBot_SendingMesssage(object sender, IrcClient.IrcDataEventArgs e)
         {
             foreach (string user in this.IrcBot.MessagesByUser.Keys)
             {

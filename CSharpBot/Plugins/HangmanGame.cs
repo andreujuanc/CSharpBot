@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-using Nexus.IRC;
-
-namespace IrcBot
+using IrcClient;
+namespace CSharpBot.Plugins
 {
     public class HangmanGame : AddOnBase
     {
