@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -13,6 +13,8 @@ using IrcClient;
         {
             //irc.freenode.net : 6667
             
+			// D4N93R & R4U1 R0CK5
+			
             string server = "irc.freenode.net";
             bot = new IrcBot(server, 6667);
             bot.DataReceived += new IrcDataEventHandler(bot_DataReceived);
