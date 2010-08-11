@@ -45,6 +45,7 @@
     <Compile Include="Plugins\PluginList.cs" />
     <Compile Include="Plugins\Talking.cs" />
     <Compile Include="Plugins\WikipediaPlugin.cs" />
+    <Compile Include="Plugins\Rae.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
